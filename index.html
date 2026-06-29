@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio rasmi Mohammad Alif Hakimi Bin Mohd Zawi — Mechatronics Engineer, Industrial AI, Computer Vision, PLC & IoT Automation." />
+  <meta name="description" content="Portfolio interview Mohammad Alif Hakimi Bin Mohd Zawi — Mechatronics Engineer, Industrial AI, Computer Vision, PLC & IoT Automation." />
   <meta name="author" content="Mohammad Alif Hakimi Bin Mohd Zawi" />
-  <title>Mohammad Alif Hakimi | Portfolio</title>
+  <meta name="theme-color" content="#2563eb" />
+  <title>Mohammad Alif Hakimi | Interview Portfolio</title>
+
   <style>
     :root {
       --bg: #f7f9fc;
@@ -16,6 +18,7 @@
       --primary: #2563eb;
       --primary-dark: #1d4ed8;
       --accent: #0f172a;
+      --success: #16a34a;
       --line: rgba(15, 23, 42, 0.1);
       --shadow: 0 24px 70px rgba(15, 23, 42, 0.09);
       --radius-xl: 28px;
@@ -32,6 +35,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 96px;
     }
 
     body {
@@ -50,9 +54,15 @@
       text-decoration: none;
     }
 
-    img, svg {
+    img,
+    svg {
       display: block;
       max-width: 100%;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
     }
 
     .container {
@@ -65,7 +75,7 @@
       top: 0;
       z-index: 50;
       border-bottom: 1px solid var(--line);
-      background: rgba(247, 249, 252, 0.82);
+      background: rgba(247, 249, 252, 0.86);
       backdrop-filter: blur(18px);
     }
 
@@ -74,7 +84,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
     }
 
     .brand {
@@ -83,6 +93,7 @@
       gap: 12px;
       font-weight: 800;
       letter-spacing: -0.04em;
+      flex-shrink: 0;
     }
 
     .brand-mark {
@@ -99,17 +110,19 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      gap: 4px;
       list-style: none;
     }
 
     .nav-links a {
       display: inline-flex;
-      padding: 10px 13px;
+      padding: 9px 10px;
       border-radius: 999px;
       color: var(--muted);
-      font-size: 0.93rem;
-      font-weight: 650;
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
       transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
     }
 
@@ -124,6 +137,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-shrink: 0;
     }
 
     .language-switch {
@@ -174,14 +188,14 @@
     }
 
     .hero {
-      padding: 92px 0 58px;
+      padding: 88px 0 54px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 44px;
-      align-items: center;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      align-items: start;
     }
 
     .eyebrow {
@@ -208,8 +222,8 @@
 
     h1 {
       max-width: 760px;
-      font-size: clamp(2.7rem, 7vw, 5.8rem);
-      line-height: 0.96;
+      font-size: clamp(2.7rem, 7vw, 5.6rem);
+      line-height: 0.98;
       letter-spacing: -0.075em;
       color: var(--accent);
     }
@@ -222,17 +236,18 @@
     }
 
     .hero-copy {
-      max-width: 650px;
-      margin: 24px 0 32px;
+      max-width: 680px;
+      margin: 24px 0 30px;
       color: var(--muted);
       font-size: 1.08rem;
     }
 
     .hero-actions,
+    .resource-actions,
     .contact-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
+      gap: 12px;
       align-items: center;
     }
 
@@ -245,6 +260,7 @@
       padding: 12px 18px;
       border: 1px solid transparent;
       border-radius: 999px;
+      font: inherit;
       font-weight: 850;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
@@ -265,7 +281,7 @@
     .btn-secondary {
       color: var(--accent);
       border-color: var(--line);
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.82);
     }
 
     .btn-secondary:hover {
@@ -276,12 +292,22 @@
       box-shadow: var(--shadow);
     }
 
+    .btn-light {
+      color: #0f172a;
+      background: #fff;
+    }
+
+    .btn-light:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.16);
+    }
+
     .hero-card {
       position: relative;
       padding: 28px;
       border: 1px solid rgba(255, 255, 255, 0.72);
       border-radius: var(--radius-xl);
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.72);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
@@ -298,26 +324,11 @@
 
     .profile-visual {
       position: relative;
-      min-height: 430px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .profile-badge {
-      width: 148px;
-      height: 148px;
+      min-height: auto;
       display: grid;
-      place-items: center;
-      border-radius: 42px;
-      color: #fff;
-      background: linear-gradient(145deg, var(--accent), var(--primary));
-      box-shadow: 0 28px 52px rgba(15, 23, 42, 0.2);
-      font-size: 3.4rem;
-      font-weight: 900;
-      letter-spacing: -0.08em;
-      animation: float 5s ease-in-out infinite;
+      grid-template-columns: 148px minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 24px;
     }
 
     .profile-photo-wrap {
@@ -327,18 +338,27 @@
       animation: float 5s ease-in-out infinite;
     }
 
-    .profile-photo {
+    .profile-photo,
+    .profile-badge {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border: 1px solid rgba(255, 255, 255, 0.72);
       border-radius: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
       background: linear-gradient(145deg, var(--accent), var(--primary));
       box-shadow: 0 28px 52px rgba(15, 23, 42, 0.2);
     }
 
-    .profile-photo-wrap .profile-badge {
-      animation: none;
+    .profile-photo {
+      object-fit: cover;
+    }
+
+    .profile-badge {
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 3.4rem;
+      font-weight: 900;
+      letter-spacing: -0.08em;
     }
 
     .profile-fallback {
@@ -358,7 +378,7 @@
       padding: 14px 15px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.84);
     }
 
     .role-pill strong {
@@ -380,7 +400,7 @@
       padding: 18px 14px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.84);
     }
 
     .metric strong {
@@ -395,7 +415,7 @@
       display: block;
       margin-top: 8px;
       color: var(--muted);
-      font-size: 0.83rem;
+      font-size: 0.81rem;
       font-weight: 700;
     }
 
@@ -421,6 +441,7 @@
     }
 
     h2 {
+      max-width: 760px;
       font-size: clamp(2rem, 4vw, 3.2rem);
       line-height: 1.05;
       letter-spacing: -0.06em;
@@ -432,78 +453,84 @@
       color: var(--muted);
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 24px;
-    }
-
     .panel {
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.8);
       box-shadow: var(--shadow);
     }
 
-    .about-card {
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+    }
+
+    .intro-card {
       padding: 30px;
     }
 
-    .about-card p {
-      color: var(--muted);
-      margin-top: 14px;
+    .intro-card h3,
+    .feature-content h3,
+    .timeline-column h3,
+    .document-card h3,
+    .certificate-card h3,
+    .additional-card h3 {
+      letter-spacing: -0.035em;
     }
 
-    .highlight-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+    .intro-card p {
+      margin-top: 14px;
+      color: var(--muted);
+    }
+
+    .interview-summary {
       padding: 24px;
     }
 
-    .highlight {
-      padding: 18px;
-      border-radius: 20px;
-      background: var(--surface-soft);
-      border: 1px solid rgba(37, 99, 235, 0.1);
+    .summary-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
     }
 
-    .highlight-icon {
-      width: 38px;
-      height: 38px;
+    .summary-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+      border-radius: 18px;
+      background: var(--surface-soft);
+      color: var(--muted);
+    }
+
+    .summary-number {
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
       display: grid;
       place-items: center;
-      border-radius: 13px;
-      margin-bottom: 13px;
+      border-radius: 11px;
       color: #fff;
       background: var(--primary);
+      font-size: 0.82rem;
       font-weight: 900;
-    }
-
-    .highlight h3 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-      letter-spacing: -0.02em;
-    }
-
-    .highlight p {
-      color: var(--muted);
-      font-size: 0.92rem;
     }
 
     .skills-layout {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
     .skill-card {
       position: relative;
-      min-height: 245px;
+      min-height: 250px;
       padding: 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.84);
       box-shadow: 0 18px 54px rgba(15, 23, 42, 0.06);
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       overflow: hidden;
@@ -540,7 +567,7 @@
 
     .skill-card h3 {
       margin-bottom: 12px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       letter-spacing: -0.025em;
     }
 
@@ -555,10 +582,164 @@
       padding: 7px 10px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.86);
+      background: rgba(255, 255, 255, 0.9);
       color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 750;
+    }
+
+    .feature-project {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 26px;
+      padding: 26px;
+      align-items: stretch;
+    }
+
+    .feature-media {
+      min-height: 460px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface-soft);
+    }
+
+    .feature-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      object-fit: cover;
+    }
+
+    .image-fallback {
+      min-height: 460px;
+      display: none;
+      place-items: center;
+      padding: 30px;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 850;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 16rem),
+        var(--surface-soft);
+    }
+
+    .feature-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 4px 4px 4px 0;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.09);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .feature-content > p {
+      color: var(--muted);
+    }
+
+    .project-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .detail-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface-soft);
+    }
+
+    .detail-card h4 {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 0.96rem;
+      letter-spacing: -0.02em;
+    }
+
+    .detail-card p,
+    .detail-card li {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .detail-card ul {
+      padding-left: 18px;
+    }
+
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      list-style: none;
+    }
+
+    .class-grid li {
+      padding: 9px 10px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.72);
       font-size: 0.82rem;
       font-weight: 750;
+    }
+
+    .process-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      list-style: none;
+    }
+
+    .process-strip li {
+      position: relative;
+      min-height: 90px;
+      display: grid;
+      place-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .talking-points {
+      border: 1px solid rgba(37, 99, 235, 0.14);
+      border-radius: 20px;
+      background: rgba(37, 99, 235, 0.05);
+      overflow: hidden;
+    }
+
+    .talking-points summary {
+      padding: 16px 18px;
+      color: var(--primary);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .talking-points ol {
+      padding: 0 22px 20px 40px;
+      color: var(--muted);
+    }
+
+    .talking-points li + li {
+      margin-top: 7px;
     }
 
     .timeline-grid {
@@ -571,20 +752,19 @@
       padding: 28px;
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.8);
       box-shadow: 0 18px 54px rgba(15, 23, 42, 0.06);
     }
 
     .timeline-column h3 {
       margin-bottom: 22px;
       font-size: 1.35rem;
-      letter-spacing: -0.04em;
     }
 
     .timeline-item {
       position: relative;
       padding-left: 27px;
-      padding-bottom: 26px;
+      padding-bottom: 28px;
       border-left: 2px solid rgba(37, 99, 235, 0.14);
     }
 
@@ -630,108 +810,129 @@
 
     .timeline-item ul {
       margin-top: 10px;
-      padding-left: 17px;
+      padding-left: 18px;
     }
 
-    .projects-grid {
+    .document-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
-    .project-card {
+    .document-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 290px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 18px 54px rgba(15, 23, 42, 0.06);
+      transition: 0.22s ease;
+    }
+
+    .document-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(37, 99, 235, 0.26);
+      box-shadow: var(--shadow);
+    }
+
+    .document-number {
+      width: 44px;
+      height: 44px;
       display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      font-weight: 900;
+    }
+
+    .document-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.03rem;
+      line-height: 1.35;
+    }
+
+    .document-card p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .document-card .btn {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+    .additional-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
+    }
+
+    .additional-card {
       padding: 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
       background: rgba(255, 255, 255, 0.82);
       box-shadow: 0 18px 54px rgba(15, 23, 42, 0.06);
-      transition: 0.25s ease;
     }
 
-    .project-card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow);
-      border-color: rgba(37, 99, 235, 0.25);
+    .additional-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
     }
 
-    .project-image-wrap {
-      width: 100%;
-      height: 180px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: var(--surface-soft);
-    }
-
-    .project-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.35s ease;
-    }
-
-    .project-card:hover .project-image {
-      transform: scale(1.04);
-    }
-
-    .project-image-fallback {
-      width: 100%;
-      height: 100%;
-      display: none;
-      place-items: center;
-      padding: 20px;
+    .additional-card p {
       color: var(--muted);
-      text-align: center;
-      font-size: 0.9rem;
-      font-weight: 800;
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 12rem),
-        var(--surface-soft);
     }
 
-    .project-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 18px;
+    .additional-card .tag {
+      margin-top: 14px;
     }
 
-    .project-icon {
-      width: 56px;
-      height: 56px;
-      flex: 0 0 auto;
+    .education-grid {
       display: grid;
-      place-items: center;
-      border-radius: 18px;
-      color: #fff;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      font-size: 1.35rem;
-      font-weight: 900;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
     }
 
-    .project-card h3 {
-      margin-bottom: 8px;
-      font-size: 1.2rem;
-      letter-spacing: -0.035em;
+    .certificate-grid {
+      display: grid;
+      gap: 14px;
     }
 
-    .project-card p {
+    .certificate-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+    }
+
+    .certificate-card p {
       color: var(--muted);
+      font-size: 0.9rem;
     }
 
     .achievement-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 15px;
+      margin-top: 24px;
     }
 
     .achievement-card {
       padding: 20px;
       border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.82);
       transition: 0.22s ease;
     }
 
@@ -750,6 +951,22 @@
     .achievement-card span {
       color: var(--muted);
       font-size: 0.9rem;
+    }
+
+    .achievement-certificates {
+      margin-top: 34px;
+    }
+
+    .achievement-certificates > h3 {
+      margin-bottom: 16px;
+      font-size: 1.35rem;
+      letter-spacing: -0.04em;
+    }
+
+    .achievement-certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
     }
 
     .contact-panel {
@@ -880,20 +1097,56 @@
       50% { transform: translateY(-12px); }
     }
 
-    @media (max-width: 980px) {
-      .hero-grid,
-      .about-grid,
-      .timeline-grid,
-      .contact-panel {
-        grid-template-columns: 1fr;
+    @media (max-width: 1080px) {
+      .nav-links {
+        gap: 2px;
+      }
+
+      .nav-links a {
+        padding: 8px 8px;
+        font-size: 0.79rem;
       }
 
       .skills-layout {
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .document-grid,
+      .additional-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .intro-grid,
+      .feature-project,
+      .timeline-grid,
+      .education-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-content {
+        padding: 0;
+      }
+
+      .feature-media,
+      .feature-media img,
+      .image-fallback {
+        min-height: 360px;
+      }
+
       .achievement-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .profile-visual {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo-wrap {
+        justify-self: center;
       }
 
       .section-heading {
@@ -902,7 +1155,7 @@
       }
     }
 
-    @media (max-width: 780px) {
+    @media (max-width: 820px) {
       .menu-btn {
         display: inline-block;
       }
@@ -918,7 +1171,7 @@
         padding: 14px;
         border: 1px solid var(--line);
         border-radius: 22px;
-        background: rgba(255, 255, 255, 0.96);
+        background: rgba(255, 255, 255, 0.98);
         box-shadow: var(--shadow);
       }
 
@@ -928,6 +1181,7 @@
 
       .nav-links a {
         justify-content: center;
+        font-size: 0.92rem;
       }
 
       .hero {
@@ -938,20 +1192,16 @@
         min-height: auto;
       }
 
-      .metric-strip,
-      .highlight-list,
-      .skills-layout,
-      .projects-grid,
-      .achievement-grid {
+      .process-strip {
         grid-template-columns: 1fr;
       }
 
-      .contact-panel {
-        padding: 26px;
+      .process-strip li {
+        min-height: 62px;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 620px) {
       .container {
         width: min(100% - 28px, var(--max-width));
       }
@@ -974,6 +1224,7 @@
       }
 
       .hero-actions,
+      .resource-actions,
       .contact-actions {
         align-items: stretch;
         flex-direction: column;
@@ -983,22 +1234,73 @@
         width: 100%;
       }
 
-      .project-image-wrap {
-        height: 160px;
+      .metric-strip,
+      .skills-layout,
+      .project-details-grid,
+      .class-grid,
+      .document-grid,
+      .additional-grid,
+      .achievement-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-project {
+        padding: 18px;
+      }
+
+      .feature-media,
+      .feature-media img,
+      .image-fallback {
+        min-height: 280px;
+      }
+
+      .certificate-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .certificate-card .btn {
+        width: 100%;
+      }
+
+      .contact-panel {
+        padding: 26px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 <body>
   <!--
-    IMAGE SETUP FOR GITHUB
-    1. Create a folder named "assets" in the same location as index.html.
-    2. Upload and rename your images exactly like this:
-       - assets/profile.jpg
-       - assets/project-defect-detection.jpg
-       - assets/project-football-analysis.jpg
-    3. If an image is not uploaded yet, the website will show a clean fallback instead of a broken image icon.
+    REQUIRED GITHUB ASSETS
+
+    assets/profile.jpg
+    assets/MukaDepanFYPProject.jpeg
+    assets/ThesisFYP.pdf
+    assets/MukaDepanMaster.jpg
+    assets/Comparative Analysis of YOLO-Based Deep Learning Models for Defect Detection in Product Packaging.pdf
+    assets/A Hierarchical Mixture-of-Experts Framework.pdf
+    assets/Controlled Evaluation of Attention, Loss, and Upsampling Modifications in YOLOv10m for Packaging Defect Detection.pdf
+    assets/Sijil_Ijazah.pdf
+    assets/Sijil_Diploma.pdf
+    assets/Sijil_SPM.pdf
+    assets/Anugerah_Sukarelawan.pdf
+    assets/Inspektor.pdf
+    assets/MPP_TYDP.pdf
+    assets/UniMAP_FutureX.pdf
+    assets/GE Certificate.pdf
   -->
+
   <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
       <a class="brand" href="#home" aria-label="Back to home">
@@ -1007,10 +1309,13 @@
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" data-i18n="navAbout">Tentang</a></li>
-        <li><a href="#skills" data-i18n="navSkills">Kemahiran</a></li>
-        <li><a href="#experience" data-i18n="navExperience">Pengalaman</a></li>
-        <li><a href="#projects" data-i18n="navProjects">Projek</a></li>
+        <li><a href="#introduction" data-i18n="navIntroduction">Pengenalan</a></li>
+        <li><a href="#technical" data-i18n="navTechnical">Teknikal</a></li>
+        <li><a href="#fyp" data-i18n="navFyp">FYP</a></li>
+        <li><a href="#internship" data-i18n="navInternship">Internship</a></li>
+        <li><a href="#master" data-i18n="navMaster">Master</a></li>
+        <li><a href="#other-projects" data-i18n="navOther">Projek Lain</a></li>
+        <li><a href="#education" data-i18n="navEducation">Pendidikan</a></li>
         <li><a href="#contact" data-i18n="navContact">Hubungi</a></li>
       </ul>
 
@@ -1030,18 +1335,25 @@
     <header class="hero">
       <div class="container hero-grid">
         <div class="hero-copy-wrap reveal">
-          <div class="eyebrow"><span class="pulse"></span><span data-i18n="heroEyebrow">Terbuka untuk peluang kerjaya</span></div>
+          <div class="eyebrow">
+            <span class="pulse"></span>
+            <span data-i18n="heroEyebrow">Portfolio pembentangan interview</span>
+          </div>
+
           <h1>
             <span data-i18n="heroName">Mohammad Alif Hakimi</span><br />
             <span class="gradient-text" data-i18n="heroHeadline">Industrial AI & Automation Engineer</span>
           </h1>
+
           <p class="hero-copy" data-i18n="heroDescription">
-            Graduan Mechatronics Engineering dengan fokus kepada computer vision industri, PLC/IoT automation dan sistem pemeriksaan kualiti masa nyata untuk persekitaran pembuatan moden.
+            Graduan Mechatronics Engineering dan pelajar Master by Research dengan fokus kepada computer vision, deep learning, industrial automation dan penyelesaian pemeriksaan kualiti masa nyata.
           </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:alifhakimi0077@gmail.com" data-i18n="heroCta">Hubungi Saya</a>
-            <a class="btn btn-secondary" href="#projects" data-i18n="heroSecondary">Lihat Projek</a>
+            <a class="btn btn-primary" href="#introduction" data-i18n="heroCta">Mulakan Pengenalan</a>
+            <a class="btn btn-secondary" href="#fyp" data-i18n="heroSecondary">Lihat Projek Utama</a>
           </div>
+
         </div>
 
         <aside class="hero-card reveal" aria-label="Professional highlights">
@@ -1050,14 +1362,16 @@
               <img class="profile-photo" src="assets/profile.jpg" alt="Profile photo of Mohammad Alif Hakimi" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
               <div class="profile-badge profile-fallback" aria-hidden="true">AH</div>
             </div>
+
             <div class="role-stack">
               <div class="role-pill"><strong data-i18n="roleOne">Computer Vision</strong><span>YOLO</span></div>
-              <div class="role-pill"><strong data-i18n="roleTwo">Automation</strong><span>PLC</span></div>
-              <div class="role-pill"><strong data-i18n="roleThree">IoT Monitoring</strong><span>IIoT</span></div>
+              <div class="role-pill"><strong data-i18n="roleTwo">Video Action Analysis</strong><span>LSTM</span></div>
+              <div class="role-pill"><strong data-i18n="roleThree">Automation</strong><span>PLC</span></div>
             </div>
+
             <div class="metric-strip">
-              <div class="metric"><strong>99%</strong><span data-i18n="metricOne">Recall defect detection</span></div>
-              <div class="metric"><strong>&lt;100ms</strong><span data-i18n="metricTwo">Latency inference</span></div>
+              <div class="metric"><strong>2</strong><span data-i18n="metricOne">Projek penyelidikan utama</span></div>
+              <div class="metric"><strong>3</strong><span data-i18n="metricTwo">Paper projek Master</span></div>
               <div class="metric"><strong>BEM</strong><span data-i18n="metricThree">Graduate Engineer</span></div>
             </div>
           </div>
@@ -1065,63 +1379,55 @@
       </div>
     </header>
 
-    <section id="about">
+    <section id="introduction">
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <p class="section-kicker" data-i18n="aboutKicker">About Me</p>
-            <h2 data-i18n="aboutTitle">Profil profesional yang menghubungkan AI, automasi dan pembuatan.</h2>
+            <p class="section-kicker" data-i18n="introKicker">Self Introduction</p>
+            <h2 data-i18n="introTitle">Pengenalan ringkas yang terus menghubungkan latar belakang saya dengan jawatan yang dipohon.</h2>
           </div>
-          <p class="section-desc" data-i18n="aboutDesc">
-            Saya membina penyelesaian yang membantu proses industri menjadi lebih pintar, cepat dan konsisten melalui data, computer vision dan integrasi automasi.
+          <p class="section-desc" data-i18n="introDesc">
+            Bahagian ini disusun untuk digunakan sebagai pembukaan pembentangan interview selama kira-kira 30 hingga 60 saat.
           </p>
         </div>
 
-        <div class="about-grid">
-          <article class="panel about-card reveal">
-            <h3 data-i18n="aboutCardTitle">Ringkasan</h3>
-            <p data-i18n="aboutP1">
-              Saya ialah graduan Bachelor of Mechatronic Engineering with Honours dari UniMAP dan kini menyambung Master of Science in Mechatronic Engineering secara penyelidikan. Minat utama saya ialah Industrial AI, real-time quality inspection, PLC automation dan IoT monitoring.
+        <div class="intro-grid">
+          <article class="panel intro-card reveal">
+            <h3 data-i18n="introCardTitle">Tentang Saya</h3>
+            <p data-i18n="introP1">
+              Saya ialah graduan Bachelor of Mechatronic Engineering with Honours dari Universiti Malaysia Perlis dan kini sedang mengikuti Master of Science in Mechatronic Engineering secara penyelidikan.
             </p>
-            <p data-i18n="aboutP2">
-              Pengalaman projek saya merangkumi sistem defect detection menggunakan YOLO, RT-DETR, CNN dan LSTM, termasuk pengoptimuman model untuk mencapai recall tinggi serta inference latency rendah bagi aplikasi industri.
+            <p data-i18n="introP2">
+              Fokus utama saya ialah computer vision, deep learning dan industrial automation. Saya telah membangunkan sistem analisis tindakan pertahanan bola sepak daripada video serta sistem defect detection untuk pembungkusan produk menggunakan keluarga model YOLO.
+            </p>
+            <p data-i18n="introP3">
+              Saya berminat untuk menggunakan gabungan pengetahuan mekatronik, pengaturcaraan dan Artificial Intelligence bagi membangunkan penyelesaian yang praktikal, boleh diukur dan sesuai digunakan dalam persekitaran industri.
             </p>
           </article>
 
-          <div class="panel highlight-list reveal">
-            <div class="highlight">
-              <div class="highlight-icon">01</div>
-              <h3 data-i18n="highlightOneTitle">Industrial AI</h3>
-              <p data-i18n="highlightOneDesc">Membangunkan model computer vision untuk pemeriksaan kualiti dan klasifikasi kecacatan.</p>
-            </div>
-            <div class="highlight">
-              <div class="highlight-icon">02</div>
-              <h3 data-i18n="highlightTwoTitle">Automation Ready</h3>
-              <p data-i18n="highlightTwoDesc">Berpengalaman dengan Advanced PLC Siemens, sensor, actuator dan sokongan production line.</p>
-            </div>
-            <div class="highlight">
-              <div class="highlight-icon">03</div>
-              <h3 data-i18n="highlightThreeTitle">Research Mindset</h3>
-              <p data-i18n="highlightThreeDesc">Terlibat dalam eksperimen model, dokumentasi, dataset management dan analisis prestasi.</p>
-            </div>
-            <div class="highlight">
-              <div class="highlight-icon">04</div>
-              <h3 data-i18n="highlightFourTitle">Leadership</h3>
-              <p data-i18n="highlightFourDesc">Pernah memegang peranan kepimpinan pelajar dan mengetuai program komuniti berimpak.</p>
-            </div>
-          </div>
+          <aside class="panel interview-summary reveal">
+            <ul class="summary-list">
+              <li><span class="summary-number">01</span><span data-i18n="introPointOne">Bachelor of Mechatronic Engineering with Honours.</span></li>
+              <li><span class="summary-number">02</span><span data-i18n="introPointTwo">MSc Mechatronic Engineering by Research.</span></li>
+              <li><span class="summary-number">03</span><span data-i18n="introPointThree">Pengalaman dalam image dan video-based computer vision.</span></li>
+              <li><span class="summary-number">04</span><span data-i18n="introPointFour">Pendedahan kepada AI R&D dan production line.</span></li>
+              <li><span class="summary-number">05</span><span data-i18n="introPointFive">Graduate Engineer berdaftar dengan BEM.</span></li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="skills">
+    <section id="technical">
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <p class="section-kicker" data-i18n="skillsKicker">Skills</p>
-            <h2 data-i18n="skillsTitle">Kemahiran teknikal untuk AI industri dan automasi.</h2>
+            <p class="section-kicker" data-i18n="technicalKicker">Technical Profile</p>
+            <h2 data-i18n="technicalTitle">Kemahiran utama yang menyokong projek dan pengalaman saya.</h2>
           </div>
-          <p class="section-desc" data-i18n="skillsDesc">Gabungan software, hardware dan sistem pembuatan untuk membina solusi end-to-end.</p>
+          <p class="section-desc" data-i18n="technicalDesc">
+            Ringkasan ini membantu penemuduga memahami hubungan antara kemahiran, projek dan pengalaman industri saya.
+          </p>
         </div>
 
         <div class="skills-layout">
@@ -1129,169 +1435,411 @@
             <div class="skill-icon">AI</div>
             <h3 data-i18n="skillOneTitle">AI & Computer Vision</h3>
             <div class="skill-tags">
-              <span class="tag">YOLO</span><span class="tag">RT-DETR</span><span class="tag">CNN</span><span class="tag">LSTM</span><span class="tag">Model Evaluation</span><span class="tag">Optimization</span>
+              <span class="tag">YOLO Family</span>
+              <span class="tag">R-CNN</span>
+              <span class="tag">LRCNN</span>
+              <span class="tag">CNN</span>
+              <span class="tag">LSTM</span>
+              <span class="tag">Model Evaluation</span>
             </div>
           </article>
 
           <article class="skill-card reveal">
-            <div class="skill-icon">PY</div>
-            <h3 data-i18n="skillTwoTitle">Programming & Data</h3>
+            <div class="skill-icon">DATA</div>
+            <h3 data-i18n="skillTwoTitle">Data & Preprocessing</h3>
             <div class="skill-tags">
-              <span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">MySQL</span><span class="tag">Linux</span><span class="tag">Visual Studio</span>
+              <span class="tag">Image Data</span>
+              <span class="tag">Video Data</span>
+              <span class="tag">Annotation</span>
+              <span class="tag">Dataset Management</span>
+              <span class="tag">Frame Extraction</span>
+              <span class="tag">Validation</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">CODE</div>
+            <h3 data-i18n="skillThreeTitle">Programming & Tools</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">MATLAB</span>
+              <span class="tag">Simulink</span>
+              <span class="tag">Linux</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Visual Studio</span>
             </div>
           </article>
 
           <article class="skill-card reveal">
             <div class="skill-icon">PLC</div>
-            <h3 data-i18n="skillThreeTitle">Industrial Automation</h3>
+            <h3 data-i18n="skillFourTitle">Industrial Automation</h3>
             <div class="skill-tags">
-              <span class="tag">Siemens PLC</span><span class="tag">Sensors</span><span class="tag">Actuators</span><span class="tag">Production Support</span><span class="tag">Machine Operation</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">IoT</div>
-            <h3 data-i18n="skillFourTitle">IoT & Monitoring</h3>
-            <div class="skill-tags">
-              <span class="tag">Device Integration</span><span class="tag">Monitoring</span><span class="tag">Industrial Workflow</span><span class="tag">OK/NG Reporting</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">CAD</div>
-            <h3 data-i18n="skillFiveTitle">Design & Tools</h3>
-            <div class="skill-tags">
-              <span class="tag">AutoCAD</span><span class="tag">Microsoft Office</span><span class="tag">Documentation</span><span class="tag">Experiment Report</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-icon">COM</div>
-            <h3 data-i18n="skillSixTitle">Professional Strengths</h3>
-            <div class="skill-tags">
-              <span class="tag">Leadership</span><span class="tag">R&D</span><span class="tag">Teaching</span><span class="tag">Teamwork</span><span class="tag">Bahasa Melayu</span><span class="tag">English</span>
+              <span class="tag">Siemens PLC</span>
+              <span class="tag">Sensors</span>
+              <span class="tag">Actuators</span>
+              <span class="tag">IoT Monitoring</span>
+              <span class="tag">Production Support</span>
+              <span class="tag">Machine Operation</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience">
+    <section id="fyp">
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <p class="section-kicker" data-i18n="expKicker">Experience & Education</p>
-            <h2 data-i18n="expTitle">Latar belakang kerja dan akademik.</h2>
+            <p class="section-kicker" data-i18n="fypKicker">Final Year Project</p>
+            <h2 data-i18n="fypTitle">Football Defensive Action Detection</h2>
           </div>
-          <p class="section-desc" data-i18n="expDesc">Pengalaman merentasi R&D AI, production line, pengajaran dan pendidikan mekatronik.</p>
+          <p class="section-desc" data-i18n="fypDesc">
+            Sistem analisis video untuk mengenal pasti tindakan pertahanan pemain dan membantu mengukur prestasi pertahanan.
+          </p>
+        </div>
+
+        <article class="panel feature-project reveal">
+          <div class="feature-media">
+            <img src="assets/MukaDepanFYPProject.jpeg" alt="Front cover of Football Defensive Action Detection project" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="image-fallback">Upload: assets/MukaDepanFYPProject.jpeg</div>
+          </div>
+
+          <div class="feature-content">
+            <div class="project-meta">
+              <span class="meta-pill" data-i18n="fypMetaOne">Video-based project</span>
+              <span class="meta-pill" data-i18n="fypMetaTwo">6 action classes</span>
+              <span class="meta-pill">R-CNN · LRCNN · LSTM</span>
+            </div>
+
+            <p data-i18n="fypOverview">
+              Projek ini dibangunkan untuk mengenal pasti tindakan pertahanan daripada rakaman video bola sepak. Sistem membezakan jenis tindakan, menentukan sama ada tindakan berjaya atau tidak berjaya, dan mengira jumlah tindakan pertahanan pemain untuk menyokong penilaian prestasi.
+            </p>
+
+            <div class="project-details-grid">
+              <div class="detail-card">
+                <h4 data-i18n="fypObjectiveTitle">Objektif</h4>
+                <p data-i18n="fypObjectiveText">Mengesan, mengelaskan dan mengira tindakan pertahanan pemain daripada video perlawanan.</p>
+              </div>
+
+              <div class="detail-card">
+                <h4 data-i18n="fypDataTitle">Data & Preprocessing</h4>
+                <p data-i18n="fypDataText">Rakaman video dipotong secara semi-automatic kepada urutan 33 frames bagi setiap tindakan.</p>
+              </div>
+
+              <div class="detail-card">
+                <h4 data-i18n="fypModelsTitle">Model</h4>
+                <p>R-CNN, LRCNN, LSTM</p>
+              </div>
+
+              <div class="detail-card">
+                <h4 data-i18n="fypOutputTitle">Output Akhir</h4>
+                <p data-i18n="fypOutputText">Jenis tindakan, status berjaya atau tidak berjaya, jumlah tindakan dan maklumat prestasi pertahanan pemain.</p>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h4 data-i18n="fypClassesTitle">Enam Kelas Tindakan</h4>
+              <ul class="class-grid">
+                <li data-i18n="classOne">Successful Intercept</li>
+                <li data-i18n="classTwo">Unsuccessful Intercept</li>
+                <li data-i18n="classThree">Successful Sliding Tackle</li>
+                <li data-i18n="classFour">Unsuccessful Sliding Tackle</li>
+                <li data-i18n="classFive">Successful Standing Tackle</li>
+                <li data-i18n="classSix">Unsuccessful Standing Tackle</li>
+              </ul>
+            </div>
+
+            <ol class="process-strip" aria-label="FYP workflow">
+              <li data-i18n="fypStepOne">Video perlawanan</li>
+              <li data-i18n="fypStepTwo">Kenal pasti tindakan</li>
+              <li data-i18n="fypStepThree">Semi-automatic cutting</li>
+              <li data-i18n="fypStepFour">33 frames per action</li>
+              <li data-i18n="fypStepFive">Training & evaluation</li>
+            </ol>
+
+            <div class="resource-actions">
+              <a class="btn btn-primary" href="https://canva.link/qjwd0qlwg8lju8i" target="_blank" rel="noopener noreferrer" data-i18n="viewFypSlides">Lihat Slide FYP</a>
+              <a class="btn btn-secondary" href="assets/ThesisFYP.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewFypThesis">Lihat Thesis FYP</a>
+            </div>
+
+            <details class="talking-points">
+              <summary data-i18n="talkingPointsTitle">Poin yang diterangkan semasa interview</summary>
+              <ol>
+                <li data-i18n="fypTalkOne">Masalah analisis prestasi pertahanan secara manual.</li>
+                <li data-i18n="fypTalkTwo">Cara video dikumpul dan diproses menjadi 33 frames.</li>
+                <li data-i18n="fypTalkThree">Perbezaan model yang diuji dan kaedah penilaian.</li>
+                <li data-i18n="fypTalkFour">Cabaran membina dan melabel video dataset.</li>
+                <li data-i18n="fypTalkFive">Bagaimana output membantu analisis prestasi pemain.</li>
+              </ol>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="internship">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="internKicker">Internship Experience</p>
+            <h2 data-i18n="internTitle">Pengalaman AI R&D dan pendedahan kepada production line.</h2>
+          </div>
+          <p class="section-desc" data-i18n="internDesc">
+            Dua pengalaman internship ini membina pemahaman saya tentang pembangunan model serta keperluan operasi sebenar di industri.
+          </p>
         </div>
 
         <div class="timeline-grid">
-          <div class="timeline-column reveal">
-            <h3 data-i18n="experienceHeading">Pengalaman</h3>
+          <article class="timeline-column reveal">
+            <h3 data-i18n="internAiHeading">AI Research & Development</h3>
+
             <div class="timeline-item">
-              <span class="timeline-date">May 2025 - Jun 2025</span>
-              <h4 data-i18n="expOneTitle">MySTEP Guru Ganti — SK Seberang Ramai</h4>
-              <p data-i18n="expOneDesc">Mengajar Matematik, menyediakan eRPH, merekod perkembangan murid dan menyokong aktiviti sekolah.</p>
+              <span class="timeline-date">Aug 2023 – Oct 2023</span>
+              <h4 data-i18n="internAiTitle">AI R&D Intern — IDERIA Sdn. Bhd.</h4>
+              <p data-i18n="internAiSummary">Menyokong projek soccer action detection yang menggunakan data video dan model pembelajaran mendalam.</p>
+              <ul>
+                <li data-i18n="internAiOne">Membantu aktiviti pengumpulan data daripada rakaman perlawanan.</li>
+                <li data-i18n="internAiTwo">Menyediakan, menyusun dan mengurus dataset.</li>
+                <li data-i18n="internAiThree">Membantu latihan baseline CNN dan LSTM.</li>
+                <li data-i18n="internAiFour">Menyokong eksperimen dan dokumentasi projek.</li>
+              </ul>
             </div>
+
             <div class="timeline-item">
-              <span class="timeline-date">Aug 2023 - Oct 2023</span>
-              <h4 data-i18n="expTwoTitle">Intern R&D AI — IDERIA Sdn. Bhd.</h4>
-              <p data-i18n="expTwoDesc">Menyokong projek AI soccer action detection melalui penyediaan dataset, latihan baseline CNN/LSTM, eksperimen dan dokumentasi.</p>
+              <h4 data-i18n="internAiLearnTitle">Pembelajaran Utama</h4>
+              <p data-i18n="internAiLearnText">Pengurusan data dunia sebenar, pelabelan konsisten, eksperimen model secara tersusun dan kerjasama dalam persekitaran R&D.</p>
             </div>
+          </article>
+
+          <article class="timeline-column reveal">
+            <h3 data-i18n="internProductionHeading">Production Line Experience</h3>
+
             <div class="timeline-item">
-              <span class="timeline-date">Mar 2021 - Jul 2021</span>
-              <h4 data-i18n="expThreeTitle">Intern Production Line Technician — AK Dynamic Sdn. Bhd.</h4>
-              <p data-i18n="expThreeDesc">Membantu operasi dan penyelenggaraan mesin injection molding dan blow molding, termasuk pengurusan scrap/waste parts.</p>
+              <span class="timeline-date">Mar 2021 – Jul 2021</span>
+              <h4 data-i18n="internProductionTitle">Production Line Technician Intern — AK Dynamic Sdn. Bhd.</h4>
+              <p data-i18n="internProductionSummary">Membantu operasi serta penyelenggaraan asas mesin dalam persekitaran pengeluaran.</p>
+              <ul>
+                <li data-i18n="internProductionOne">Membantu operasi injection moulding dan blow moulding.</li>
+                <li data-i18n="internProductionTwo">Menyokong aktiviti penyelenggaraan mesin.</li>
+                <li data-i18n="internProductionThree">Mengurus scrap dan waste parts.</li>
+                <li data-i18n="internProductionFour">Membantu memastikan kelancaran pengeluaran.</li>
+              </ul>
             </div>
+
             <div class="timeline-item">
-              <span class="timeline-date">2019 - 2020</span>
-              <h4 data-i18n="expFourTitle">Part-time F&B Business — Season Western Cafe</h4>
-              <p data-i18n="expFourDesc">Mengurus operasi harian dan penjejakan kewangan asas untuk perniagaan kecil.</p>
+              <h4 data-i18n="internProductionLearnTitle">Pembelajaran Utama</h4>
+              <p data-i18n="internProductionLearnText">Kepentingan machine uptime, quality control, penyelenggaraan, keselamatan dan hubungan antara automasi dengan produktiviti.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="master">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="masterKicker">Master’s Research Project</p>
+            <h2 data-i18n="masterTitle">Defect Detection in Product Packaging</h2>
+          </div>
+          <p class="section-desc" data-i18n="masterDesc">
+            Penyelidikan computer vision berasaskan keluarga model YOLO untuk pemeriksaan kecacatan pembungkusan produk.
+          </p>
+        </div>
+
+        <article class="panel feature-project reveal">
+          <div class="feature-media">
+            <img src="assets/MukaDepanMaster.jpg" alt="Front cover of Defect Detection in Product Packaging project" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="image-fallback">Upload: assets/MukaDepanMaster.jpg</div>
           </div>
 
-          <div class="timeline-column reveal">
+          <div class="feature-content">
+            <div class="project-meta">
+              <span class="meta-pill" data-i18n="masterMetaOne">Image-based project</span>
+              <span class="meta-pill">YOLO Family</span>
+              <span class="meta-pill" data-i18n="masterMetaThree">Industrial quality inspection</span>
+            </div>
+
+            <p data-i18n="masterOverview">
+              Projek ini memberi fokus kepada pembangunan dan penilaian sistem defect detection untuk pembungkusan produk. Pendekatan ini bertujuan membantu pemeriksaan kualiti menjadi lebih pantas, konsisten dan sesuai untuk integrasi dengan persekitaran pengeluaran.
+            </p>
+
+            <div class="project-details-grid">
+              <div class="detail-card">
+                <h4 data-i18n="masterProblemTitle">Masalah</h4>
+                <p data-i18n="masterProblemText">Pemeriksaan manual boleh dipengaruhi oleh keletihan operator, kelajuan production line dan ketidakseragaman penilaian.</p>
+              </div>
+
+              <div class="detail-card">
+                <h4 data-i18n="masterDataTitle">Data</h4>
+                <p data-i18n="masterDataText">Image dataset pembungkusan produk yang melalui proses pengumpulan, annotation, preprocessing dan evaluation.</p>
+              </div>
+
+              <div class="detail-card">
+                <h4 data-i18n="masterModelTitle">Model</h4>
+                <p data-i18n="masterModelText">Perbandingan dan pengubahsuaian model dalam keluarga YOLO untuk meningkatkan detection performance dan deployment practicality.</p>
+              </div>
+
+              <div class="detail-card">
+                <h4 data-i18n="masterContributionTitle">Fokus Sumbangan</h4>
+                <p data-i18n="masterContributionText">Model comparison, hierarchical expert framework, dan controlled evaluation terhadap attention, loss serta upsampling modifications.</p>
+              </div>
+            </div>
+
+            <div class="resource-actions">
+              <a class="btn btn-primary" href="https://canva.link/69wdtzhvgertvms" target="_blank" rel="noopener noreferrer" data-i18n="viewMasterSlides">Lihat Slide Master</a>
+            </div>
+
+            <details class="talking-points">
+              <summary data-i18n="talkingPointsTitle">Poin yang diterangkan semasa interview</summary>
+              <ol>
+                <li data-i18n="masterTalkOne">Masalah quality inspection yang hendak diselesaikan.</li>
+                <li data-i18n="masterTalkTwo">Sebab keluarga model YOLO dipilih.</li>
+                <li data-i18n="masterTalkThree">Proses dataset collection, annotation dan evaluation.</li>
+                <li data-i18n="masterTalkFour">Cabaran defect kecil, bertindih dan variasi visual.</li>
+                <li data-i18n="masterTalkFive">Cara model dibandingkan dari segi prestasi dan kecekapan.</li>
+              </ol>
+            </details>
+          </div>
+        </article>
+
+        <div class="section-heading reveal" style="margin-top: 42px;">
+          <div>
+            <p class="section-kicker" data-i18n="papersKicker">Research Papers</p>
+            <h2 data-i18n="papersTitle">Tiga paper utama daripada projek Master.</h2>
+          </div>
+          <p class="section-desc" data-i18n="papersDesc">Setiap paper menunjukkan fasa kajian yang berbeza daripada model comparison hingga framework dan controlled evaluation.</p>
+        </div>
+
+        <div class="document-grid">
+          <article class="document-card reveal">
+            <div class="document-number">01</div>
+            <h3>Comparative Analysis of YOLO-Based Deep Learning Models for Defect Detection in Product Packaging</h3>
+            <p data-i18n="paperOneDesc">Perbandingan model YOLO sebagai asas untuk mengenal pasti trade-off antara detection performance dan keperluan deployment.</p>
+            <a class="btn btn-secondary" href="assets/Comparative%20Analysis%20of%20YOLO-Based%20Deep%20Learning%20Models%20for%20Defect%20Detection%20in%20Product%20Packaging.pdf" target="_blank" rel="noopener noreferrer" data-i18n="readPaper">Baca Paper</a>
+          </article>
+
+          <article class="document-card reveal">
+            <div class="document-number">02</div>
+            <h3>A Hierarchical Mixture-of-Experts Framework (HiMoE-F) for Real-Time Packaging Label Defect Detection</h3>
+            <p data-i18n="paperTwoDesc">Pembangunan hierarchical mixture-of-experts framework untuk menggabungkan kepakaran model dalam pengesanan kecacatan label pembungkusan.</p>
+            <a class="btn btn-secondary" href="assets/A%20Hierarchical%20Mixture-of-Experts%20Framework.pdf" target="_blank" rel="noopener noreferrer" data-i18n="readPaper">Baca Paper</a>
+          </article>
+
+          <article class="document-card reveal">
+            <div class="document-number">03</div>
+            <h3>Controlled Evaluation of Attention, Loss, and Upsampling Modifications in YOLOv10m for Packaging Defect Detection</h3>
+            <p data-i18n="paperThreeDesc">Penilaian terkawal terhadap attention, loss dan upsampling modifications untuk memahami sumbangan sebenar setiap perubahan.</p>
+            <a class="btn btn-secondary" href="assets/Controlled%20Evaluation%20of%20Attention%2C%20Loss%2C%20and%20Upsampling%20Modifications%20in%20YOLOv10m%20for%20Packaging%20Defect%20Detection.pdf" target="_blank" rel="noopener noreferrer" data-i18n="readPaper">Baca Paper</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="other-projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="otherKicker">Other Projects & Contributions</p>
+            <h2 data-i18n="otherTitle">Projek dan sumbangan tambahan yang menunjukkan pengalaman teknikal dan kepimpinan.</h2>
+          </div>
+          <p class="section-desc" data-i18n="otherDesc">Bahagian ini menyokong dua projek utama dengan pengalaman aplikasi, komuniti dan kerja berpasukan.</p>
+        </div>
+
+        <div class="additional-grid">
+          <article class="additional-card reveal">
+            <h3 data-i18n="otherOneTitle">AI Soccer Action Detection Support</h3>
+            <p data-i18n="otherOneDesc">Menyokong data collection, dataset preparation, baseline CNN/LSTM training dan dokumentasi semasa internship di IDERIA.</p>
+            <span class="tag">AI R&D</span>
+          </article>
+
+          <article class="additional-card reveal">
+            <h3 data-i18n="otherTwoTitle">Cahaya Kasih UniMAP</h3>
+            <p data-i18n="otherTwoDesc">Mengetuai inisiatif pemasangan lampu solar komuniti yang menggabungkan perancangan teknikal, kerja lapangan dan kepimpinan pasukan.</p>
+            <span class="tag">Community Engineering</span>
+          </article>
+
+          <article class="additional-card reveal">
+            <h3 data-i18n="otherThreeTitle">Production Line Support</h3>
+            <p data-i18n="otherThreeDesc">Pendedahan kepada injection moulding, blow moulding, machine operation, waste handling dan sokongan kelancaran pengeluaran.</p>
+            <span class="tag">Manufacturing</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="educationKicker">Education & Certificates</p>
+            <h2 data-i18n="educationTitle">Latar belakang akademik, sijil dan pencapaian terpilih.</h2>
+          </div>
+          <p class="section-desc" data-i18n="educationDesc">Sijil dibuka dalam tab baharu supaya boleh ditunjukkan hanya apabila diperlukan semasa interview.</p>
+        </div>
+
+        <div class="education-grid">
+          <article class="timeline-column reveal">
             <h3 data-i18n="educationHeading">Pendidikan</h3>
+
             <div class="timeline-item">
-              <span class="timeline-date">Oct 2024 - Present</span>
+              <span class="timeline-date">Oct 2024 – Present</span>
               <h4 data-i18n="eduOneTitle">MSc Mechatronic Engineering (Research)</h4>
               <p>Universiti Malaysia Perlis (UniMAP)</p>
             </div>
+
             <div class="timeline-item">
-              <span class="timeline-date">Oct 2021 - Nov 2024</span>
+              <span class="timeline-date">Oct 2021 – Nov 2024</span>
               <h4 data-i18n="eduTwoTitle">Bachelor of Mechatronic Engineering with Honours</h4>
               <p>Universiti Malaysia Perlis (UniMAP) — CGPA 3.06</p>
             </div>
+
             <div class="timeline-item">
-              <span class="timeline-date">Mar 2018 - Jul 2021</span>
+              <span class="timeline-date">Mar 2018 – Jul 2021</span>
               <h4 data-i18n="eduThreeTitle">Diploma in Mechatronic Engineering with Honours</h4>
               <p>Universiti Malaysia Perlis (UniMAP) — CGPA 3.26</p>
             </div>
+
             <div class="timeline-item">
-              <span class="timeline-date">Jan 2013 - Nov 2017</span>
+              <span class="timeline-date">Jan 2013 – Nov 2017</span>
               <h4 data-i18n="eduFourTitle">SPM Sains Tulen</h4>
               <p>SMK Panchor Perdana — 4A 3B 1C 1D</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="section-kicker" data-i18n="projectKicker">Portfolio Projects</p>
-            <h2 data-i18n="projectTitle">Projek pilihan yang relevan untuk industri.</h2>
-          </div>
-          <p class="section-desc" data-i18n="projectDesc">Fokus kepada computer vision, model pembelajaran mendalam, dataset dan aplikasi masa nyata.</p>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-image-wrap">
-              <img class="project-image" src="assets/project-defect-detection.jpg" alt="Project image for Real-time AI Defect Detection System" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-              <div class="project-image-fallback" aria-hidden="true">Upload image: assets/project-defect-detection.jpg</div>
-            </div>
-            <div class="project-top">
-              <div>
-                <h3 data-i18n="projectOneTitle">Real-time AI Defect Detection System</h3>
-                <p data-i18n="projectOneMeta">Industrial Quality Inspection | 2025</p>
-              </div>
-              <div class="project-icon">01</div>
-            </div>
-            <p data-i18n="projectOneDesc">Membangunkan pipeline computer vision menggunakan YOLO, RT-DETR dan CNN untuk klasifikasi serta pengesanan pelbagai jenis kecacatan. Sistem dioptimumkan kepada 99% recall dan latency bawah 100 ms untuk pemeriksaan industri masa nyata.</p>
-            <div class="skill-tags"><span class="tag">YOLO</span><span class="tag">RT-DETR</span><span class="tag">CNN</span><span class="tag">Real-time Inspection</span><span class="tag">OK/NG</span></div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-image-wrap">
-              <img class="project-image" src="assets/project-football-analysis.jpg" alt="Project image for Football Defensive Action Analysis" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-              <div class="project-image-fallback" aria-hidden="true">Upload image: assets/project-football-analysis.jpg</div>
-            </div>
-            <div class="project-top">
+          <div class="certificate-grid reveal">
+            <article class="certificate-card">
               <div>
-                <h3 data-i18n="projectTwoTitle">Football Defensive Action Analysis</h3>
-                <p data-i18n="projectTwoMeta">Final Year Project | 2024</p>
+                <h3 data-i18n="degreeCertTitle">Sijil Ijazah Sarjana Muda</h3>
+                <p data-i18n="degreeCertDesc">Bachelor of Mechatronic Engineering with Honours.</p>
               </div>
-              <div class="project-icon">02</div>
-            </div>
-            <p data-i18n="projectTwoDesc">Membina model action analysis menggunakan CNN dan LSTM untuk mengenal pasti defensive actions daripada urutan video bola sepak. Projek melibatkan dataset management, training, validation, reporting dan analisis limitasi.</p>
-            <div class="skill-tags"><span class="tag">CNN</span><span class="tag">LSTM</span><span class="tag">Video Analysis</span><span class="tag">Dataset</span><span class="tag">Model Training</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
+              <a class="btn btn-secondary" href="assets/Sijil_Ijazah.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
 
-    <section id="achievements">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="section-kicker" data-i18n="awardKicker">Awards & Leadership</p>
-            <h2 data-i18n="awardTitle">Pencapaian terpilih.</h2>
+            <article class="certificate-card">
+              <div>
+                <h3 data-i18n="diplomaCertTitle">Sijil Diploma</h3>
+                <p data-i18n="diplomaCertDesc">Diploma in Mechatronic Engineering with Honours.</p>
+              </div>
+              <a class="btn btn-secondary" href="assets/Sijil_Diploma.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
+
+            <article class="certificate-card">
+              <div>
+                <h3 data-i18n="spmCertTitle">Sijil SPM</h3>
+                <p data-i18n="spmCertDesc">Sijil Pelajaran Malaysia, aliran Sains Tulen.</p>
+              </div>
+              <a class="btn btn-secondary" href="assets/Sijil_SPM.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
+
+            <article class="certificate-card">
+              <div>
+                <h3 data-i18n="bemTitle">Professional Registration</h3>
+                <p data-i18n="bemDesc">Board of Engineers Malaysia — Graduate Engineer.</p>
+              </div>
+              <a class="btn btn-secondary" href="assets/GE%20Certificate.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
           </div>
-          <p class="section-desc" data-i18n="awardDesc">Anugerah akademik, inovasi, pembentangan antarabangsa dan kepimpinan universiti.</p>
         </div>
 
         <div class="achievement-grid">
@@ -1299,10 +1847,47 @@
           <div class="achievement-card reveal"><strong>TAR Foundation</strong><span data-i18n="awardTwo">Bachelor’s Degree Scholarship, 2021–2024</span></div>
           <div class="achievement-card reveal"><strong>Gold Award</strong><span data-i18n="awardThree">EMDIEX UniMAP, 2024</span></div>
           <div class="achievement-card reveal"><strong>Silver Award</strong><span data-i18n="awardFour">EREKA UniMAP, 2024</span></div>
-          <div class="achievement-card reveal"><strong>IMT-GT</strong><span data-i18n="awardFive">Gold Award, Best University Presentation, 2023</span></div>
+          <div class="achievement-card reveal"><strong>IMT-GT</strong><span data-i18n="awardFive">Best University Presentation, 2023</span></div>
           <div class="achievement-card reveal"><strong>SRC UniMAP</strong><span data-i18n="awardSix">Deputy President, representing about 12,000 students</span></div>
-          <div class="achievement-card reveal"><strong>SUKSIS</strong><span data-i18n="awardSeven">Inspektor Kor Sukarelawan Polis Siswa Siswi, 2024</span></div>
-          <div class="achievement-card reveal"><strong>Cahaya Kasih</strong><span data-i18n="awardEight">Community solar lamp installation initiatives, 2021–2024</span></div>
+          <div class="achievement-card reveal"><strong>SUKSIS</strong><span data-i18n="awardSeven">Inspector, Student Volunteer Police Corps</span></div>
+          <div class="achievement-card reveal"><strong>Cahaya Kasih</strong><span data-i18n="awardEight">Community solar lamp initiative, 2021–2024</span></div>
+        </div>
+
+        <div class="achievement-certificates reveal">
+          <h3 data-i18n="achievementCertificatesTitle">Sijil Pencapaian</h3>
+          <div class="achievement-certificate-grid">
+            <article class="certificate-card">
+              <div>
+                <h3 data-i18n="volunteerCertTitle">Anugerah Sukarelawan</h3>
+                <p data-i18n="volunteerCertDesc">Dokumen pengiktirafan bagi pencapaian dan sumbangan kesukarelawanan.</p>
+              </div>
+              <a class="btn btn-secondary" href="assets/Anugerah_Sukarelawan.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
+
+            <article class="certificate-card">
+              <div>
+                <h3 data-i18n="inspectorCertTitle">Sijil Inspektor SUKSIS</h3>
+                <p data-i18n="inspectorCertDesc">Dokumen pengiktirafan sebagai Inspektor Kor Sukarelawan Polis Siswa Siswi.</p>
+              </div>
+              <a class="btn btn-secondary" href="assets/Inspektor.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
+
+            <article class="certificate-card">
+              <div>
+                <h3 data-i18n="mppCertTitle">Sijil MPP — Timbalan Yang Dipertua</h3>
+                <p data-i18n="mppCertDesc">Dokumen kepimpinan Majlis Perwakilan Pelajar sebagai Timbalan Yang Dipertua.</p>
+              </div>
+              <a class="btn btn-secondary" href="assets/MPP_TYDP.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
+
+            <article class="certificate-card">
+              <div>
+                <h3 data-i18n="futurexCertTitle">Sijil UniMAP FutureX</h3>
+                <p data-i18n="futurexCertDesc">Dokumen penyertaan atau pencapaian bagi program UniMAP FutureX.</p>
+              </div>
+              <a class="btn btn-secondary" href="assets/UniMAP_FutureX.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Lihat Sijil</a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1312,10 +1897,11 @@
         <div class="contact-panel reveal">
           <div>
             <p class="section-kicker" data-i18n="contactKicker">Contact</p>
-            <h2 data-i18n="contactTitle">Mari bincang peluang kerja, automasi atau projek AI industri.</h2>
-            <p data-i18n="contactDesc">Saya berminat untuk menyumbang dalam bidang industrial automation, AI quality inspection, computer vision dan data-driven manufacturing.</p>
+            <h2 data-i18n="contactTitle">Terima kasih. Saya bersedia untuk menerangkan projek, pengalaman dan kesesuaian saya dengan jawatan ini.</h2>
+            <p data-i18n="contactDesc">Saya berminat untuk menyumbang dalam bidang industrial automation, computer vision, AI quality inspection dan data-driven manufacturing.</p>
+
             <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:alifhakimi0077@gmail.com" data-i18n="contactEmailBtn">Email Saya</a>
+              <a class="btn btn-light" href="mailto:alifhakimi0077@gmail.com" data-i18n="contactEmailBtn">Email Saya</a>
               <a class="btn btn-secondary" href="tel:+601121998007" data-i18n="contactCallBtn">Telefon</a>
             </div>
           </div>
@@ -1325,14 +1911,17 @@
               <span>✉</span>
               <div><small>Email</small><a href="mailto:alifhakimi0077@gmail.com">alifhakimi0077@gmail.com</a></div>
             </div>
+
             <div class="contact-row">
               <span>☎</span>
               <div><small data-i18n="phoneLabel">Telefon</small><a href="tel:+601121998007">+60 11-2199 8007</a></div>
             </div>
+
             <div class="contact-row">
               <span>⌖</span>
               <div><small data-i18n="locationLabel">Lokasi</small><strong>Perlis, Malaysia</strong></div>
             </div>
+
             <div class="contact-row">
               <span>in</span>
               <div><small>LinkedIn</small><strong>Mohammad Alif Hakimi Bin Mohd Zawi</strong></div>
@@ -1347,185 +1936,358 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Mohammad Alif Hakimi Bin Mohd Zawi. <span data-i18n="footerText">Dibina untuk portfolio profesional dan permohonan kerja.</span></p>
+      <p>© <span id="year"></span> Mohammad Alif Hakimi Bin Mohd Zawi. <span data-i18n="footerText">Portfolio pembentangan profesional dan permohonan kerja.</span></p>
     </div>
   </footer>
 
   <script>
     const translations = {
       ms: {
-        navAbout: "Tentang",
-        navSkills: "Kemahiran",
-        navExperience: "Pengalaman",
-        navProjects: "Projek",
+        navIntroduction: "Pengenalan",
+        navTechnical: "Teknikal",
+        navFyp: "FYP",
+        navInternship: "Internship",
+        navMaster: "Master",
+        navOther: "Projek Lain",
+        navEducation: "Pendidikan",
         navContact: "Hubungi",
-        heroEyebrow: "Terbuka untuk peluang kerjaya",
+        heroEyebrow: "Portfolio pembentangan interview",
         heroName: "Mohammad Alif Hakimi",
         heroHeadline: "Industrial AI & Automation Engineer",
-        heroDescription: "Graduan Mechatronics Engineering dengan fokus kepada computer vision industri, PLC/IoT automation dan sistem pemeriksaan kualiti masa nyata untuk persekitaran pembuatan moden.",
-        heroCta: "Hubungi Saya",
-        heroSecondary: "Lihat Projek",
+        heroDescription: "Graduan Mechatronics Engineering dan pelajar Master by Research dengan fokus kepada computer vision, deep learning, industrial automation dan penyelesaian pemeriksaan kualiti masa nyata.",
+        heroCta: "Mulakan Pengenalan",
+        heroSecondary: "Lihat Projek Utama",
         roleOne: "Computer Vision",
-        roleTwo: "Automation",
-        roleThree: "IoT Monitoring",
-        metricOne: "Recall defect detection",
-        metricTwo: "Latency inference",
+        roleTwo: "Video Action Analysis",
+        roleThree: "Automation",
+        metricOne: "Projek penyelidikan utama",
+        metricTwo: "Paper projek Master",
         metricThree: "Graduate Engineer",
-        aboutKicker: "About Me",
-        aboutTitle: "Profil profesional yang menghubungkan AI, automasi dan pembuatan.",
-        aboutDesc: "Saya membina penyelesaian yang membantu proses industri menjadi lebih pintar, cepat dan konsisten melalui data, computer vision dan integrasi automasi.",
-        aboutCardTitle: "Ringkasan",
-        aboutP1: "Saya ialah graduan Bachelor of Mechatronic Engineering with Honours dari UniMAP dan kini menyambung Master of Science in Mechatronic Engineering secara penyelidikan. Minat utama saya ialah Industrial AI, real-time quality inspection, PLC automation dan IoT monitoring.",
-        aboutP2: "Pengalaman projek saya merangkumi sistem defect detection menggunakan YOLO, RT-DETR, CNN dan LSTM, termasuk pengoptimuman model untuk mencapai recall tinggi serta inference latency rendah bagi aplikasi industri.",
-        highlightOneTitle: "Industrial AI",
-        highlightOneDesc: "Membangunkan model computer vision untuk pemeriksaan kualiti dan klasifikasi kecacatan.",
-        highlightTwoTitle: "Automation Ready",
-        highlightTwoDesc: "Berpengalaman dengan Advanced PLC Siemens, sensor, actuator dan sokongan production line.",
-        highlightThreeTitle: "Research Mindset",
-        highlightThreeDesc: "Terlibat dalam eksperimen model, dokumentasi, dataset management dan analisis prestasi.",
-        highlightFourTitle: "Leadership",
-        highlightFourDesc: "Pernah memegang peranan kepimpinan pelajar dan mengetuai program komuniti berimpak.",
-        skillsKicker: "Skills",
-        skillsTitle: "Kemahiran teknikal untuk AI industri dan automasi.",
-        skillsDesc: "Gabungan software, hardware dan sistem pembuatan untuk membina solusi end-to-end.",
+        introKicker: "Self Introduction",
+        introTitle: "Pengenalan ringkas yang terus menghubungkan latar belakang saya dengan jawatan yang dipohon.",
+        introDesc: "Bahagian ini disusun untuk digunakan sebagai pembukaan pembentangan interview selama kira-kira 30 hingga 60 saat.",
+        introCardTitle: "Tentang Saya",
+        introP1: "Saya ialah graduan Bachelor of Mechatronic Engineering with Honours dari Universiti Malaysia Perlis dan kini sedang mengikuti Master of Science in Mechatronic Engineering secara penyelidikan.",
+        introP2: "Fokus utama saya ialah computer vision, deep learning dan industrial automation. Saya telah membangunkan sistem analisis tindakan pertahanan bola sepak daripada video serta sistem defect detection untuk pembungkusan produk menggunakan keluarga model YOLO.",
+        introP3: "Saya berminat untuk menggunakan gabungan pengetahuan mekatronik, pengaturcaraan dan Artificial Intelligence bagi membangunkan penyelesaian yang praktikal, boleh diukur dan sesuai digunakan dalam persekitaran industri.",
+        introPointOne: "Bachelor of Mechatronic Engineering with Honours.",
+        introPointTwo: "MSc Mechatronic Engineering by Research.",
+        introPointThree: "Pengalaman dalam image dan video-based computer vision.",
+        introPointFour: "Pendedahan kepada AI R&D dan production line.",
+        introPointFive: "Graduate Engineer berdaftar dengan BEM.",
+        technicalKicker: "Technical Profile",
+        technicalTitle: "Kemahiran utama yang menyokong projek dan pengalaman saya.",
+        technicalDesc: "Ringkasan ini membantu penemuduga memahami hubungan antara kemahiran, projek dan pengalaman industri saya.",
         skillOneTitle: "AI & Computer Vision",
-        skillTwoTitle: "Programming & Data",
-        skillThreeTitle: "Industrial Automation",
-        skillFourTitle: "IoT & Monitoring",
-        skillFiveTitle: "Design & Tools",
-        skillSixTitle: "Professional Strengths",
-        expKicker: "Experience & Education",
-        expTitle: "Latar belakang kerja dan akademik.",
-        expDesc: "Pengalaman merentasi R&D AI, production line, pengajaran dan pendidikan mekatronik.",
-        experienceHeading: "Pengalaman",
-        expOneTitle: "MySTEP Guru Ganti — SK Seberang Ramai",
-        expOneDesc: "Mengajar Matematik, menyediakan eRPH, merekod perkembangan murid dan menyokong aktiviti sekolah.",
-        expTwoTitle: "Intern R&D AI — IDERIA Sdn. Bhd.",
-        expTwoDesc: "Menyokong projek AI soccer action detection melalui penyediaan dataset, latihan baseline CNN/LSTM, eksperimen dan dokumentasi.",
-        expThreeTitle: "Intern Production Line Technician — AK Dynamic Sdn. Bhd.",
-        expThreeDesc: "Membantu operasi dan penyelenggaraan mesin injection molding dan blow molding, termasuk pengurusan scrap/waste parts.",
-        expFourTitle: "Part-time F&B Business — Season Western Cafe",
-        expFourDesc: "Mengurus operasi harian dan penjejakan kewangan asas untuk perniagaan kecil.",
+        skillTwoTitle: "Data & Preprocessing",
+        skillThreeTitle: "Programming & Tools",
+        skillFourTitle: "Industrial Automation",
+        fypKicker: "Final Year Project",
+        fypTitle: "Football Defensive Action Detection",
+        fypDesc: "Sistem analisis video untuk mengenal pasti tindakan pertahanan pemain dan membantu mengukur prestasi pertahanan.",
+        fypMetaOne: "Video-based project",
+        fypMetaTwo: "6 action classes",
+        fypOverview: "Projek ini dibangunkan untuk mengenal pasti tindakan pertahanan daripada rakaman video bola sepak. Sistem membezakan jenis tindakan, menentukan sama ada tindakan berjaya atau tidak berjaya, dan mengira jumlah tindakan pertahanan pemain untuk menyokong penilaian prestasi.",
+        fypObjectiveTitle: "Objektif",
+        fypObjectiveText: "Mengesan, mengelaskan dan mengira tindakan pertahanan pemain daripada video perlawanan.",
+        fypDataTitle: "Data & Preprocessing",
+        fypDataText: "Rakaman video dipotong secara semi-automatic kepada urutan 33 frames bagi setiap tindakan.",
+        fypModelsTitle: "Model",
+        fypOutputTitle: "Output Akhir",
+        fypOutputText: "Jenis tindakan, status berjaya atau tidak berjaya, jumlah tindakan dan maklumat prestasi pertahanan pemain.",
+        fypClassesTitle: "Enam Kelas Tindakan",
+        classOne: "Successful Intercept",
+        classTwo: "Unsuccessful Intercept",
+        classThree: "Successful Sliding Tackle",
+        classFour: "Unsuccessful Sliding Tackle",
+        classFive: "Successful Standing Tackle",
+        classSix: "Unsuccessful Standing Tackle",
+        fypStepOne: "Video perlawanan",
+        fypStepTwo: "Kenal pasti tindakan",
+        fypStepThree: "Semi-automatic cutting",
+        fypStepFour: "33 frames per action",
+        fypStepFive: "Training & evaluation",
+        viewFypSlides: "Lihat Slide FYP",
+        viewFypThesis: "Lihat Thesis FYP",
+        talkingPointsTitle: "Poin yang diterangkan semasa interview",
+        fypTalkOne: "Masalah analisis prestasi pertahanan secara manual.",
+        fypTalkTwo: "Cara video dikumpul dan diproses menjadi 33 frames.",
+        fypTalkThree: "Perbezaan model yang diuji dan kaedah penilaian.",
+        fypTalkFour: "Cabaran membina dan melabel video dataset.",
+        fypTalkFive: "Bagaimana output membantu analisis prestasi pemain.",
+        internKicker: "Internship Experience",
+        internTitle: "Pengalaman AI R&D dan pendedahan kepada production line.",
+        internDesc: "Dua pengalaman internship ini membina pemahaman saya tentang pembangunan model serta keperluan operasi sebenar di industri.",
+        internAiHeading: "AI Research & Development",
+        internAiTitle: "AI R&D Intern — IDERIA Sdn. Bhd.",
+        internAiSummary: "Menyokong projek soccer action detection yang menggunakan data video dan model pembelajaran mendalam.",
+        internAiOne: "Membantu aktiviti pengumpulan data daripada rakaman perlawanan.",
+        internAiTwo: "Menyediakan, menyusun dan mengurus dataset.",
+        internAiThree: "Membantu latihan baseline CNN dan LSTM.",
+        internAiFour: "Menyokong eksperimen dan dokumentasi projek.",
+        internAiLearnTitle: "Pembelajaran Utama",
+        internAiLearnText: "Pengurusan data dunia sebenar, pelabelan konsisten, eksperimen model secara tersusun dan kerjasama dalam persekitaran R&D.",
+        internProductionHeading: "Production Line Experience",
+        internProductionTitle: "Production Line Technician Intern — AK Dynamic Sdn. Bhd.",
+        internProductionSummary: "Membantu operasi serta penyelenggaraan asas mesin dalam persekitaran pengeluaran.",
+        internProductionOne: "Membantu operasi injection moulding dan blow moulding.",
+        internProductionTwo: "Menyokong aktiviti penyelenggaraan mesin.",
+        internProductionThree: "Mengurus scrap dan waste parts.",
+        internProductionFour: "Membantu memastikan kelancaran pengeluaran.",
+        internProductionLearnTitle: "Pembelajaran Utama",
+        internProductionLearnText: "Kepentingan machine uptime, quality control, penyelenggaraan, keselamatan dan hubungan antara automasi dengan produktiviti.",
+        masterKicker: "Master’s Research Project",
+        masterTitle: "Defect Detection in Product Packaging",
+        masterDesc: "Penyelidikan computer vision berasaskan keluarga model YOLO untuk pemeriksaan kecacatan pembungkusan produk.",
+        masterMetaOne: "Image-based project",
+        masterMetaThree: "Industrial quality inspection",
+        masterOverview: "Projek ini memberi fokus kepada pembangunan dan penilaian sistem defect detection untuk pembungkusan produk. Pendekatan ini bertujuan membantu pemeriksaan kualiti menjadi lebih pantas, konsisten dan sesuai untuk integrasi dengan persekitaran pengeluaran.",
+        masterProblemTitle: "Masalah",
+        masterProblemText: "Pemeriksaan manual boleh dipengaruhi oleh keletihan operator, kelajuan production line dan ketidakseragaman penilaian.",
+        masterDataTitle: "Data",
+        masterDataText: "Image dataset pembungkusan produk yang melalui proses pengumpulan, annotation, preprocessing dan evaluation.",
+        masterModelTitle: "Model",
+        masterModelText: "Perbandingan dan pengubahsuaian model dalam keluarga YOLO untuk meningkatkan detection performance dan deployment practicality.",
+        masterContributionTitle: "Fokus Sumbangan",
+        masterContributionText: "Model comparison, hierarchical expert framework, dan controlled evaluation terhadap attention, loss serta upsampling modifications.",
+        viewMasterSlides: "Lihat Slide Master",
+        masterTalkOne: "Masalah quality inspection yang hendak diselesaikan.",
+        masterTalkTwo: "Sebab keluarga model YOLO dipilih.",
+        masterTalkThree: "Proses dataset collection, annotation dan evaluation.",
+        masterTalkFour: "Cabaran defect kecil, bertindih dan variasi visual.",
+        masterTalkFive: "Cara model dibandingkan dari segi prestasi dan kecekapan.",
+        papersKicker: "Research Papers",
+        papersTitle: "Tiga paper utama daripada projek Master.",
+        papersDesc: "Setiap paper menunjukkan fasa kajian yang berbeza daripada model comparison hingga framework dan controlled evaluation.",
+        paperOneDesc: "Perbandingan model YOLO sebagai asas untuk mengenal pasti trade-off antara detection performance dan keperluan deployment.",
+        paperTwoDesc: "Pembangunan hierarchical mixture-of-experts framework untuk menggabungkan kepakaran model dalam pengesanan kecacatan label pembungkusan.",
+        paperThreeDesc: "Penilaian terkawal terhadap attention, loss dan upsampling modifications untuk memahami sumbangan sebenar setiap perubahan.",
+        readPaper: "Baca Paper",
+        otherKicker: "Other Projects & Contributions",
+        otherTitle: "Projek dan sumbangan tambahan yang menunjukkan pengalaman teknikal dan kepimpinan.",
+        otherDesc: "Bahagian ini menyokong dua projek utama dengan pengalaman aplikasi, komuniti dan kerja berpasukan.",
+        otherOneTitle: "AI Soccer Action Detection Support",
+        otherOneDesc: "Menyokong data collection, dataset preparation, baseline CNN/LSTM training dan dokumentasi semasa internship di IDERIA.",
+        otherTwoTitle: "Cahaya Kasih UniMAP",
+        otherTwoDesc: "Mengetuai inisiatif pemasangan lampu solar komuniti yang menggabungkan perancangan teknikal, kerja lapangan dan kepimpinan pasukan.",
+        otherThreeTitle: "Production Line Support",
+        otherThreeDesc: "Pendedahan kepada injection moulding, blow moulding, machine operation, waste handling dan sokongan kelancaran pengeluaran.",
+        educationKicker: "Education & Certificates",
+        educationTitle: "Latar belakang akademik, sijil dan pencapaian terpilih.",
+        educationDesc: "Sijil dibuka dalam tab baharu supaya boleh ditunjukkan hanya apabila diperlukan semasa interview.",
         educationHeading: "Pendidikan",
         eduOneTitle: "MSc Mechatronic Engineering (Research)",
         eduTwoTitle: "Bachelor of Mechatronic Engineering with Honours",
         eduThreeTitle: "Diploma in Mechatronic Engineering with Honours",
         eduFourTitle: "SPM Sains Tulen",
-        projectKicker: "Portfolio Projects",
-        projectTitle: "Projek pilihan yang relevan untuk industri.",
-        projectDesc: "Fokus kepada computer vision, model pembelajaran mendalam, dataset dan aplikasi masa nyata.",
-        projectOneTitle: "Real-time AI Defect Detection System",
-        projectOneMeta: "Industrial Quality Inspection | 2025",
-        projectOneDesc: "Membangunkan pipeline computer vision menggunakan YOLO, RT-DETR dan CNN untuk klasifikasi serta pengesanan pelbagai jenis kecacatan. Sistem dioptimumkan kepada 99% recall dan latency bawah 100 ms untuk pemeriksaan industri masa nyata.",
-        projectTwoTitle: "Football Defensive Action Analysis",
-        projectTwoMeta: "Final Year Project | 2024",
-        projectTwoDesc: "Membina model action analysis menggunakan CNN dan LSTM untuk mengenal pasti defensive actions daripada urutan video bola sepak. Projek melibatkan dataset management, training, validation, reporting dan analisis limitasi.",
-        awardKicker: "Awards & Leadership",
-        awardTitle: "Pencapaian terpilih.",
-        awardDesc: "Anugerah akademik, inovasi, pembentangan antarabangsa dan kepimpinan universiti.",
+        degreeCertTitle: "Sijil Ijazah Sarjana Muda",
+        degreeCertDesc: "Bachelor of Mechatronic Engineering with Honours.",
+        diplomaCertTitle: "Sijil Diploma",
+        diplomaCertDesc: "Diploma in Mechatronic Engineering with Honours.",
+        spmCertTitle: "Sijil SPM",
+        spmCertDesc: "Sijil Pelajaran Malaysia, aliran Sains Tulen.",
+        viewCertificate: "Lihat Sijil",
+        bemTitle: "Professional Registration",
+        bemDesc: "Board of Engineers Malaysia — Graduate Engineer.",
+        achievementCertificatesTitle: "Sijil Pencapaian",
+        volunteerCertTitle: "Anugerah Sukarelawan",
+        volunteerCertDesc: "Dokumen pengiktirafan bagi pencapaian dan sumbangan kesukarelawanan.",
+        inspectorCertTitle: "Sijil Inspektor SUKSIS",
+        inspectorCertDesc: "Dokumen pengiktirafan sebagai Inspektor Kor Sukarelawan Polis Siswa Siswi.",
+        mppCertTitle: "Sijil MPP — Timbalan Yang Dipertua",
+        mppCertDesc: "Dokumen kepimpinan Majlis Perwakilan Pelajar sebagai Timbalan Yang Dipertua.",
+        futurexCertTitle: "Sijil UniMAP FutureX",
+        futurexCertDesc: "Dokumen penyertaan atau pencapaian bagi program UniMAP FutureX.",
         awardOne: "Master’s Study Scholarship, 2024–2026",
         awardTwo: "Bachelor’s Degree Scholarship, 2021–2024",
         awardThree: "EMDIEX UniMAP, 2024",
         awardFour: "EREKA UniMAP, 2024",
-        awardFive: "Gold Award, Best University Presentation, 2023",
+        awardFive: "Best University Presentation, 2023",
         awardSix: "Deputy President, mewakili kira-kira 12,000 pelajar",
-        awardSeven: "Inspektor Kor Sukarelawan Polis Siswa Siswi, 2024",
-        awardEight: "Inisiatif pemasangan lampu solar komuniti, 2021–2024",
+        awardSeven: "Inspektor Kor Sukarelawan Polis Siswa Siswi",
+        awardEight: "Inisiatif lampu solar komuniti, 2021–2024",
         contactKicker: "Contact",
-        contactTitle: "Mari bincang peluang kerja, automasi atau projek AI industri.",
-        contactDesc: "Saya berminat untuk menyumbang dalam bidang industrial automation, AI quality inspection, computer vision dan data-driven manufacturing.",
+        contactTitle: "Terima kasih. Saya bersedia untuk menerangkan projek, pengalaman dan kesesuaian saya dengan jawatan ini.",
+        contactDesc: "Saya berminat untuk menyumbang dalam bidang industrial automation, computer vision, AI quality inspection dan data-driven manufacturing.",
         contactEmailBtn: "Email Saya",
         contactCallBtn: "Telefon",
         phoneLabel: "Telefon",
         locationLabel: "Lokasi",
-        footerText: "Dibina untuk portfolio profesional dan permohonan kerja."
+        footerText: "Portfolio pembentangan profesional dan permohonan kerja."
       },
+
       en: {
-        navAbout: "About",
-        navSkills: "Skills",
-        navExperience: "Experience",
-        navProjects: "Projects",
+        navIntroduction: "Introduction",
+        navTechnical: "Technical",
+        navFyp: "FYP",
+        navInternship: "Internship",
+        navMaster: "Master",
+        navOther: "Other Projects",
+        navEducation: "Education",
         navContact: "Contact",
-        heroEyebrow: "Open to career opportunities",
+        heroEyebrow: "Interview presentation portfolio",
         heroName: "Mohammad Alif Hakimi",
         heroHeadline: "Industrial AI & Automation Engineer",
-        heroDescription: "Mechatronics Engineering graduate focused on industrial computer vision, PLC/IoT automation, and real-time quality inspection systems for modern manufacturing environments.",
-        heroCta: "Contact Me",
-        heroSecondary: "View Projects",
+        heroDescription: "Mechatronics Engineering graduate and Master by Research student focused on computer vision, deep learning, industrial automation, and real-time quality inspection solutions.",
+        heroCta: "Start Introduction",
+        heroSecondary: "View Key Projects",
         roleOne: "Computer Vision",
-        roleTwo: "Automation",
-        roleThree: "IoT Monitoring",
-        metricOne: "Defect detection recall",
-        metricTwo: "Inference latency",
+        roleTwo: "Video Action Analysis",
+        roleThree: "Automation",
+        metricOne: "Main research projects",
+        metricTwo: "Master project papers",
         metricThree: "Graduate Engineer",
-        aboutKicker: "About Me",
-        aboutTitle: "A professional profile connecting AI, automation, and manufacturing.",
-        aboutDesc: "I build solutions that help industrial processes become smarter, faster, and more consistent through data, computer vision, and automation integration.",
-        aboutCardTitle: "Summary",
-        aboutP1: "I am a Bachelor of Mechatronic Engineering with Honours graduate from UniMAP and currently pursuing a Master of Science in Mechatronic Engineering by research. My key interests are Industrial AI, real-time quality inspection, PLC automation, and IoT monitoring.",
-        aboutP2: "My project experience includes defect detection systems using YOLO, RT-DETR, CNN, and LSTM, including model optimization for high recall and low inference latency in industrial applications.",
-        highlightOneTitle: "Industrial AI",
-        highlightOneDesc: "Developing computer vision models for quality inspection and defect classification.",
-        highlightTwoTitle: "Automation Ready",
-        highlightTwoDesc: "Experienced with Siemens Advanced PLC, sensors, actuators, and production line support.",
-        highlightThreeTitle: "Research Mindset",
-        highlightThreeDesc: "Involved in model experiments, documentation, dataset management, and performance analysis.",
-        highlightFourTitle: "Leadership",
-        highlightFourDesc: "Held student leadership roles and led impactful community initiatives.",
-        skillsKicker: "Skills",
-        skillsTitle: "Technical skills for industrial AI and automation.",
-        skillsDesc: "A combination of software, hardware, and manufacturing systems to build end-to-end solutions.",
+        introKicker: "Self Introduction",
+        introTitle: "A concise introduction that connects my background directly to the role I am applying for.",
+        introDesc: "This section is structured as a 30-to-60-second opening for an interview presentation.",
+        introCardTitle: "About Me",
+        introP1: "I graduated with a Bachelor of Mechatronic Engineering with Honours from Universiti Malaysia Perlis and I am currently pursuing a Master of Science in Mechatronic Engineering by research.",
+        introP2: "My main focus is computer vision, deep learning, and industrial automation. I have developed a football defensive action analysis system using video data and a product packaging defect detection system using the YOLO family of models.",
+        introP3: "I am interested in combining mechatronics, programming, and Artificial Intelligence to develop practical, measurable solutions for industrial environments.",
+        introPointOne: "Bachelor of Mechatronic Engineering with Honours.",
+        introPointTwo: "MSc Mechatronic Engineering by Research.",
+        introPointThree: "Experience in image- and video-based computer vision.",
+        introPointFour: "Exposure to AI R&D and production-line environments.",
+        introPointFive: "Registered BEM Graduate Engineer.",
+        technicalKicker: "Technical Profile",
+        technicalTitle: "Core skills that support my projects and experience.",
+        technicalDesc: "This summary helps interviewers understand how my skills connect with my projects and industrial exposure.",
         skillOneTitle: "AI & Computer Vision",
-        skillTwoTitle: "Programming & Data",
-        skillThreeTitle: "Industrial Automation",
-        skillFourTitle: "IoT & Monitoring",
-        skillFiveTitle: "Design & Tools",
-        skillSixTitle: "Professional Strengths",
-        expKicker: "Experience & Education",
-        expTitle: "Work and academic background.",
-        expDesc: "Experience across AI R&D, production line support, teaching, and mechatronics education.",
-        experienceHeading: "Experience",
-        expOneTitle: "MySTEP Substitute Teacher — SK Seberang Ramai",
-        expOneDesc: "Taught Mathematics, prepared eRPH lesson plans, maintained student progress records, and supported school initiatives.",
-        expTwoTitle: "AI R&D Intern — IDERIA Sdn. Bhd.",
-        expTwoDesc: "Supported an AI soccer action detection project through dataset preparation, baseline CNN/LSTM training, experimentation, and documentation.",
-        expThreeTitle: "Production Line Technician Intern — AK Dynamic Sdn. Bhd.",
-        expThreeDesc: "Assisted machine operation and maintenance for injection molding and blow molding machines, including scrap/waste parts management.",
-        expFourTitle: "Part-time F&B Business — Season Western Cafe",
-        expFourDesc: "Managed daily operations and basic financial tracking for a small business.",
+        skillTwoTitle: "Data & Preprocessing",
+        skillThreeTitle: "Programming & Tools",
+        skillFourTitle: "Industrial Automation",
+        fypKicker: "Final Year Project",
+        fypTitle: "Football Defensive Action Detection",
+        fypDesc: "A video analysis system designed to identify defensive actions and support player-performance evaluation.",
+        fypMetaOne: "Video-based project",
+        fypMetaTwo: "6 action classes",
+        fypOverview: "This project was developed to identify defensive actions from football match videos. The system distinguishes action types, determines whether an action is successful or unsuccessful, and counts each player's defensive actions to support performance evaluation.",
+        fypObjectiveTitle: "Objective",
+        fypObjectiveText: "Detect, classify, and count defensive actions from football match videos.",
+        fypDataTitle: "Data & Preprocessing",
+        fypDataText: "Match videos were semi-automatically cut into 33-frame sequences for each action.",
+        fypModelsTitle: "Models",
+        fypOutputTitle: "Final Output",
+        fypOutputText: "Action type, success status, action count, and player defensive-performance information.",
+        fypClassesTitle: "Six Action Classes",
+        classOne: "Successful Intercept",
+        classTwo: "Unsuccessful Intercept",
+        classThree: "Successful Sliding Tackle",
+        classFour: "Unsuccessful Sliding Tackle",
+        classFive: "Successful Standing Tackle",
+        classSix: "Unsuccessful Standing Tackle",
+        fypStepOne: "Match video",
+        fypStepTwo: "Identify action",
+        fypStepThree: "Semi-automatic cutting",
+        fypStepFour: "33 frames per action",
+        fypStepFive: "Training & evaluation",
+        viewFypSlides: "View FYP Slides",
+        viewFypThesis: "View FYP Thesis",
+        talkingPointsTitle: "Interview talking points",
+        fypTalkOne: "The limitations of manual defensive-performance analysis.",
+        fypTalkTwo: "How the videos were collected and processed into 33-frame sequences.",
+        fypTalkThree: "The differences between the evaluated models and evaluation methods.",
+        fypTalkFour: "Challenges in building and labelling a video dataset.",
+        fypTalkFive: "How the final output supports player-performance analysis.",
+        internKicker: "Internship Experience",
+        internTitle: "AI R&D experience and exposure to a production-line environment.",
+        internDesc: "These two internships developed my understanding of both model development and real industrial operating requirements.",
+        internAiHeading: "AI Research & Development",
+        internAiTitle: "AI R&D Intern — IDERIA Sdn. Bhd.",
+        internAiSummary: "Supported a soccer action detection project using video data and deep learning models.",
+        internAiOne: "Assisted data-collection activities using match recordings.",
+        internAiTwo: "Prepared, organised, and managed datasets.",
+        internAiThree: "Assisted baseline CNN and LSTM training.",
+        internAiFour: "Supported experiments and project documentation.",
+        internAiLearnTitle: "Key Learning",
+        internAiLearnText: "Real-world data management, consistent labelling, structured model experiments, and teamwork in an R&D environment.",
+        internProductionHeading: "Production Line Experience",
+        internProductionTitle: "Production Line Technician Intern — AK Dynamic Sdn. Bhd.",
+        internProductionSummary: "Assisted machine operation and basic maintenance in a production environment.",
+        internProductionOne: "Assisted injection-moulding and blow-moulding operations.",
+        internProductionTwo: "Supported machine-maintenance activities.",
+        internProductionThree: "Managed scrap and waste parts.",
+        internProductionFour: "Helped maintain production continuity.",
+        internProductionLearnTitle: "Key Learning",
+        internProductionLearnText: "The importance of machine uptime, quality control, maintenance, safety, and the relationship between automation and productivity.",
+        masterKicker: "Master’s Research Project",
+        masterTitle: "Defect Detection in Product Packaging",
+        masterDesc: "YOLO-family computer vision research for product-packaging defect inspection.",
+        masterMetaOne: "Image-based project",
+        masterMetaThree: "Industrial quality inspection",
+        masterOverview: "This project focuses on developing and evaluating a defect detection system for product packaging. The approach is intended to make quality inspection faster, more consistent, and more suitable for integration into production environments.",
+        masterProblemTitle: "Problem",
+        masterProblemText: "Manual inspection can be affected by operator fatigue, production-line speed, and inconsistent judgement.",
+        masterDataTitle: "Data",
+        masterDataText: "A product-packaging image dataset prepared through collection, annotation, preprocessing, and evaluation.",
+        masterModelTitle: "Models",
+        masterModelText: "Comparison and modification of YOLO-family models to improve detection performance and deployment practicality.",
+        masterContributionTitle: "Contribution Focus",
+        masterContributionText: "Model comparison, a hierarchical expert framework, and controlled evaluation of attention, loss, and upsampling modifications.",
+        viewMasterSlides: "View Master Slides",
+        masterTalkOne: "The quality-inspection problem being addressed.",
+        masterTalkTwo: "Why the YOLO family was selected.",
+        masterTalkThree: "Dataset collection, annotation, and evaluation.",
+        masterTalkFour: "Challenges involving small, overlapping, and visually varied defects.",
+        masterTalkFive: "How models were compared in terms of performance and efficiency.",
+        papersKicker: "Research Papers",
+        papersTitle: "Three main papers from the Master’s project.",
+        papersDesc: "Each paper represents a different research phase, from model comparison to framework development and controlled evaluation.",
+        paperOneDesc: "A comparison of YOLO models to identify the trade-off between detection performance and deployment requirements.",
+        paperTwoDesc: "Development of a hierarchical mixture-of-experts framework to combine model expertise for packaging-label defect detection.",
+        paperThreeDesc: "A controlled evaluation of attention, loss, and upsampling modifications to identify the actual contribution of each change.",
+        readPaper: "Read Paper",
+        otherKicker: "Other Projects & Contributions",
+        otherTitle: "Additional projects and contributions demonstrating technical experience and leadership.",
+        otherDesc: "This section supports the two main projects with practical, community, and teamwork experience.",
+        otherOneTitle: "AI Soccer Action Detection Support",
+        otherOneDesc: "Supported data collection, dataset preparation, baseline CNN/LSTM training, and documentation during the IDERIA internship.",
+        otherTwoTitle: "Cahaya Kasih UniMAP",
+        otherTwoDesc: "Led a community solar-lamp installation initiative combining technical planning, fieldwork, and team leadership.",
+        otherThreeTitle: "Production Line Support",
+        otherThreeDesc: "Exposure to injection moulding, blow moulding, machine operation, waste handling, and production continuity support.",
+        educationKicker: "Education & Certificates",
+        educationTitle: "Academic background, certificates, and selected achievements.",
+        educationDesc: "Certificates open in a new tab so they can be shown only when required during an interview.",
         educationHeading: "Education",
         eduOneTitle: "MSc Mechatronic Engineering (Research)",
         eduTwoTitle: "Bachelor of Mechatronic Engineering with Honours",
         eduThreeTitle: "Diploma in Mechatronic Engineering with Honours",
         eduFourTitle: "SPM Pure Science",
-        projectKicker: "Portfolio Projects",
-        projectTitle: "Selected projects relevant to industry.",
-        projectDesc: "Focused on computer vision, deep learning models, datasets, and real-time applications.",
-        projectOneTitle: "Real-time AI Defect Detection System",
-        projectOneMeta: "Industrial Quality Inspection | 2025",
-        projectOneDesc: "Developed a computer vision pipeline using YOLO, RT-DETR, and CNN for multi-defect classification and detection. The system was optimized to achieve 99% recall and under 100 ms latency for real-time industrial inspection.",
-        projectTwoTitle: "Football Defensive Action Analysis",
-        projectTwoMeta: "Final Year Project | 2024",
-        projectTwoDesc: "Built an action analysis model using CNN and LSTM to recognize defensive actions from football video sequences. The project involved dataset management, training, validation, reporting, and limitation analysis.",
-        awardKicker: "Awards & Leadership",
-        awardTitle: "Selected achievements.",
-        awardDesc: "Academic scholarships, innovation awards, international presentation awards, and university leadership.",
+        degreeCertTitle: "Bachelor’s Degree Certificate",
+        degreeCertDesc: "Bachelor of Mechatronic Engineering with Honours.",
+        diplomaCertTitle: "Diploma Certificate",
+        diplomaCertDesc: "Diploma in Mechatronic Engineering with Honours.",
+        spmCertTitle: "SPM Certificate",
+        spmCertDesc: "Sijil Pelajaran Malaysia, Pure Science stream.",
+        viewCertificate: "View Certificate",
+        bemTitle: "Professional Registration",
+        bemDesc: "Board of Engineers Malaysia — Graduate Engineer.",
+        achievementCertificatesTitle: "Achievement Certificates",
+        volunteerCertTitle: "Volunteer Award",
+        volunteerCertDesc: "Recognition document for volunteer achievement and contribution.",
+        inspectorCertTitle: "SUKSIS Inspector Certificate",
+        inspectorCertDesc: "Recognition document as an Inspector of the Student Volunteer Police Corps.",
+        mppCertTitle: "Student Representative Council — Deputy President",
+        mppCertDesc: "Leadership document for the role of Deputy President of the Student Representative Council.",
+        futurexCertTitle: "UniMAP FutureX Certificate",
+        futurexCertDesc: "Participation or achievement document for the UniMAP FutureX programme.",
         awardOne: "Master’s Study Scholarship, 2024–2026",
         awardTwo: "Bachelor’s Degree Scholarship, 2021–2024",
         awardThree: "EMDIEX UniMAP, 2024",
         awardFour: "EREKA UniMAP, 2024",
-        awardFive: "Gold Award, Best University Presentation, 2023",
+        awardFive: "Best University Presentation, 2023",
         awardSix: "Deputy President, representing about 12,000 students",
-        awardSeven: "Inspector, Student Volunteer Police Corps, 2024",
-        awardEight: "Community solar lamp installation initiatives, 2021–2024",
+        awardSeven: "Inspector, Student Volunteer Police Corps",
+        awardEight: "Community solar-lamp initiative, 2021–2024",
         contactKicker: "Contact",
-        contactTitle: "Let’s discuss job opportunities, automation, or industrial AI projects.",
-        contactDesc: "I am interested in contributing to industrial automation, AI quality inspection, computer vision, and data-driven manufacturing.",
+        contactTitle: "Thank you. I am ready to explain my projects, experience, and suitability for this role.",
+        contactDesc: "I am interested in contributing to industrial automation, computer vision, AI quality inspection, and data-driven manufacturing.",
         contactEmailBtn: "Email Me",
         contactCallBtn: "Call",
         phoneLabel: "Phone",
         locationLabel: "Location",
-        footerText: "Built for a professional portfolio and job applications."
+        footerText: "Professional interview and job-application portfolio."
       }
     };
 
@@ -1536,12 +2298,18 @@
     const backToTop = document.getElementById("backToTop");
 
     function setLanguage(lang) {
+      const dictionary = translations[lang] || translations.ms;
       document.documentElement.lang = lang;
+
       translatableElements.forEach((element) => {
         const key = element.dataset.i18n;
-        if (translations[lang][key]) element.textContent = translations[lang][key];
+        if (dictionary[key]) element.textContent = dictionary[key];
       });
-      languageButtons.forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
+
+      languageButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === lang);
+      });
+
       localStorage.setItem("portfolioLanguage", lang);
     }
 
@@ -1568,7 +2336,7 @@
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.14 });
+    }, { threshold: 0.12 });
 
     document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 
@@ -1577,18 +2345,30 @@
 
     function updateActiveNav() {
       let current = "";
+
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 110;
-        if (scrollY >= sectionTop) current = section.getAttribute("id");
+        const sectionTop = section.offsetTop - 130;
+        if (window.scrollY >= sectionTop) current = section.id;
       });
+
       navAnchors.forEach((anchor) => {
         anchor.classList.toggle("active", anchor.getAttribute("href") === `#${current}`);
       });
+
       backToTop.classList.toggle("show", window.scrollY > 520);
     }
 
-    window.addEventListener("scroll", updateActiveNav);
-    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 820) {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
     document.getElementById("year").textContent = new Date().getFullYear();
     setLanguage(localStorage.getItem("portfolioLanguage") || "ms");
